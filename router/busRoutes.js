@@ -11,4 +11,3 @@ router.post('/bus-routes', postBusRoutes);
 module.exports = router;
 
 
-// just for checking purpose
