@@ -3,7 +3,7 @@
 const { DataTypes } = require('sequelize');
 const {sequelize }= require("../configuration/db")
 
-const BusRoutes = sequelize.define('BusRoutes', { // Change model name to BusRoutes
+const BusDetails = sequelize.define('BusDetails', { // Change model name to BusRoutes
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -27,4 +27,4 @@ sequelize
   .then(() => console.log("successfully created table"))
   .catch((error) => console.log(error));
 
-module.exports = BusRoutes;
+module.exports = BusDetails;

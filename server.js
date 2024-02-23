@@ -1,4 +1,8 @@
+require("dotenv").config();
+
 const express = require('express');
+const {accessToken,refresh } = require("./utils/jsonwebToken")
+const adminReg = require("./models/admin.register")
 const app = express();
 
 const {connectDb} = require("./configuration/db")
@@ -12,7 +16,7 @@ app.use(express.json());
 app.use('/api', busRoutesRouter);
 
 // Start server
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 connectDb();
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
