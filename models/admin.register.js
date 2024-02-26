@@ -1,7 +1,7 @@
 const {DataTypes} = require("sequelize")
 const {sequelize} = require("../configuration/db")
 
-const adminReg = sequelize.define('AdminRegister', { 
+const AdminRegister = sequelize.define('AdminRegister', { 
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -32,4 +32,4 @@ sequelize
   .catch((error) => console.log(error));
 
 
-module.exports = adminReg;
+module.exports = AdminRegister;
